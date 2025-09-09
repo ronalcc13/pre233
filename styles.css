@@ -2,18 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #ebebeb;
 }
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  font-weight: 600;
+  border: 2px solid #373737;
+  margin: 0.01rem;
 }
-
+#contenido {
+  padding: 2rem;
+  padding-bottom: 2px;
+}
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #000;
-  color: #fff;
+  background: #373737;
+  /* color: #fff; */
   padding: 8px;
   z-index: 100;
 }
@@ -23,7 +30,7 @@ body {
 
 .site-header {
   padding: 1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #373737;
 }
 .header-inner {
   display: flex;
@@ -33,6 +40,8 @@ body {
   margin: auto;
 }
 .logo {
+  font-size: 2rem;
+  color: #373737;
   font-weight: bold;
   text-decoration: none;
 }
@@ -40,10 +49,12 @@ body {
 .menu {
   list-style: none;
   position: absolute;
+  font-size: 1.2rem;
+  font-weight:normal;
   top: 60px;
   right: 1rem;
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #373737;
   border-radius: 8px;
   width: 200px;
   display: none;
@@ -57,7 +68,7 @@ body {
   padding: 1rem;
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #373737;
 }
 .menu li a:hover {
   background: #f4f4f4;
@@ -75,21 +86,24 @@ body {
 }
 
 .banner {
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   max-width: 1000px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 2rem;
+  text-align: left;
+  border: 2px solid #373737;
+  border-radius: 6px;
+  padding: 4rem 4rem;
+  background-color: #dddddd;
 }
 .banner h1 {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  color: #373737;
+  background-color: #dddddd;
 }
 
 .productos {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 .lista-productos {
   display: grid;
@@ -97,16 +111,18 @@ body {
   list-style: none;
 }
 .producto-card article {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 6px;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 }
 .producto-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 2px solid #373737;
 }
 .producto-card h3 {
   margin-bottom: 0.25rem;
@@ -117,20 +133,26 @@ body {
 }
 .buy {
   width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #dddddd;
   padding: 0.75rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  border: 2px solid #373737;
 }
 
 .site-footer {
   text-align: center;
   padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
   border-top: 1px solid #ccc;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
-@media (min-width: 600px) {
+@media (min-width: 599px) {
   .menu {
     position: static;
     display: flex !important;
@@ -148,10 +170,21 @@ body {
   .menu-toggle {
     display: none;
   }
+  .banner {
+    background-color: #dddddd;
+  }
   .banner h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 40px;
+    padding: 0px 50px;
   }
   .lista-productos {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 599px) {
+  .banner {
+    display: none;
   }
 }
